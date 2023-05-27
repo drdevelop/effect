@@ -1,33 +1,174 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="/umi.f919bcc0.css" />
-    <script>
-      window.routerBase = "/";
-    </script>
-    <script>
-      //! umi version: 3.5.23
-    </script>
-    <script>
-      !(function () {
-        var e = localStorage.getItem("dumi:prefers-color"),
-          t = window.matchMedia("(prefers-color-scheme: dark)").matches,
-          r = ["light", "dark", "auto"];
-        document.documentElement.setAttribute(
-          "data-prefers-color",
-          e === r[2] ? (t ? r[1] : r[0]) : r.indexOf(e) > -1 ? e : r[0]
-        );
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <script src="/umi.baf170b4.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>jquery心形照片旋转爱情表白特效</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style style="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: url("./1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .top {
+      width: 100vw;
+      height: 100px;
+      margin: 20px auto;
+      font-size: 30px;
+      font-family: "华文行楷";
+      color: #fff;
+      <!-- background: -webkit-linear-gradient(45deg, #ff0000, #ffcc00, #ffff99, #33ccff, #00ff33, #6600ff, #333399);
+      -webkit-background-clip: text; -->
+    }
+
+    .box {
+      width: 100vw;
+      height: 210px;
+      perspective: 800px;
+    }
+
+    .box .pic {
+      position: relative;
+      transform-style: preserve-3d;
+      animation: play 10s linear infinite;
+    }
+
+    .box ul li {
+      list-style: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @keyframes play {
+      from {
+        transform: rotateY(0deg);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    #text {
+      width: 100%;
+      height: 200px;
+      padding: 0 20px;
+      color: #6fade1;
+      margin-top: 100px;
+      font-size: 24px;
+      font-family: "方正喵呜体";
+    }
+
+    img {}
+  </style>
+</head>
+
+<body style="">
+  <div class="top">
+    <marquee behavior="alternate">时光不老，我们不散</marquee>
+  </div>
+  <!--end top-->
+  <div class="box">
+    <div class="pic">
+      <ul>
+        <li style="transform: rotateY(0deg) translateZ(216px);"><img src="./1.png" width="" height="" alt=""></li>
+        <li style="transform: rotateY(60deg) translateZ(216px);"><img src="./2.png" width="" height="" alt=""></li>
+        <li style="transform: rotateY(120deg) translateZ(216px);"><img src="./3.png" width="" height="" alt="">
+        </li>
+        <li style="transform: rotateY(180deg) translateZ(216px);"><img src="./4.png" width="" height="" alt="">
+        </li>
+        <li style="transform: rotateY(240deg) translateZ(216px);"><img src="./5.png" width="" height="" alt="">
+        </li>
+        <li style="transform: rotateY(300deg) translateZ(216px);"><img src="./6.png" width="" height="" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--end box-->
+  <div id="text"></div>
+  <!--end text-->
+  <!-- <embed src="music.mp3" hidden="true"> -->
+  <script src="./jquery.min.js"></script>
+  <script src="./snow.js"></script>
+  <script>$(".pic ul li").each(function (i) {
+      var deg = 360 / $(".pic ul li").size(); $(this).css({ "transform": "rotateY(" + deg * i + "deg) translateZ(216px)" }); $.fn.snow({
+        minSize: 10, maxSize: 15, newOn: 500, flakeColor: "#ffffff"
+      });
+    }); var i = 0; var str = "能够遇见你是我最大的幸运；对我来说，不是在最美好的时光遇见了你，而是遇见你后都是最美好的时光！"; window.onload = function typing() {
+      var mydiv = document.getElementById("text"); mydiv.innerHTML += str.charAt(i); i++; var id = setTimeout(typing, 100); if (i == str.length) { clearTimeout(id); }
+    }
+  </script>
+
+  <div id="flake"
+    style="position: absolute; top: 135.019px; left: 57.9872px; opacity: 0.669344; font-size: 13.2316px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 117.909px; left: 292.822px; opacity: 0.548037; font-size: 16.3005px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 125.581px; left: 28.3616px; opacity: 0.908247; font-size: 17.4434px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 117.67px; left: 50.093px; opacity: 0.601622; font-size: 10.2833px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 130.095px; left: 238.078px; opacity: 0.738254; font-size: 22.3996px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 127.22px; left: 251.717px; opacity: 0.695516; font-size: 15.4462px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 104.885px; left: 184.524px; opacity: 0.529546; font-size: 19.5466px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 107.916px; left: 114.645px; opacity: 0.929692; font-size: 10.2547px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 102.34px; left: 93.3626px; opacity: 0.936461; font-size: 10.6948px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 100.839px; left: -71.6278px; opacity: 0.938284; font-size: 21.7095px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 101.32px; left: 279.326px; opacity: 0.545572; font-size: 23.5619px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 101.942px; left: -65.0793px; opacity: 0.61054; font-size: 17.9405px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 69.6531px; left: -65.9553px; opacity: 0.976142; font-size: 12.684px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 65.5538px; left: 215.265px; opacity: 0.731814; font-size: 10.8984px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 72.4349px; left: -44.2765px; opacity: 0.884206; font-size: 24.2px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 72.0218px; left: 89.4826px; opacity: 0.768351; font-size: 10.9687px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 68.6704px; left: 69.3601px; opacity: 0.684536; font-size: 17.3595px; color: rgb(255, 255, 255);">
+    ❄</div>
+  <div id="flake"
+    style="position: absolute; top: 64.6534px; left: 79.5585px; opacity: 0.982211; font-size: 11.9821px; color: rgb(255, 255, 255);">
+    ❄</div>
+</body>
+
 </html>
